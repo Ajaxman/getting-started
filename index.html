@@ -5,8 +5,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     </head>
     <body>
+
+        <p>{{ "hello " + "you" }}</p>
+        <div ng-controller="StoreController as store ">
+            <h1>{{store.product.name}}</h1>
+            <h2>{{store.product.price}}</h2>
+            <p>{{store.product.description}}</p>
+        </div>
         <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
         <script type="application/javascript" src="src/app.js"></script>
-        <p>{{ "hello " + "you" }}</p>
+
     </body>
 </html>
