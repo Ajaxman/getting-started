@@ -7,10 +7,19 @@
     <body ng-controller="StoreController as store">
 
         <p>{{ "hello " + "you" }}</p>
-        <div ng-repeat="product in store.products">
+        <div ng-repeat="product in store.products" class="col-md-8">
             <h1>{{product.name}}</h1>
-            <h2>${{product.price}}</h2>
+            <em class="pull-right">{{product.price | currency}}</em>
             <p>{{product.description}}</p>
+            <img ng-src="{{product.images[0].thumb}}" class="img-responsive" alt="Responsive image">
+
+            <section>
+                <ul class="nav nav-pills">
+                    <li><a href="">Description</a></li>
+                    <li><a href="">Specifications</a></li>
+                    <li><a href="">Reviews</a></li>
+                </ul>
+            </section>
             <button ng-show="product.canPurchase"> Add to Cart </button>
         </div>
         <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>

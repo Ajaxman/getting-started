@@ -12,6 +12,16 @@
             description: 'this is tha description of this product',
             canPurchase: true,
             soldOut: false,
+            images:[
+                {
+                    full: 'assets/full.jpg',
+                    thumb: 'assets/thumb.png'
+                },
+                {
+                    full: 'assets/full.jpg',
+                    thumb: 'assets/thumb.png'
+                }
+            ]
         },
         {
             name: 'Pentagonal Gem',
@@ -19,6 +29,16 @@
             description: 'this is tha description of this product',
             canPurchase: false,
             soldOut: false,
+            images:[
+                {
+                    full: 'assets/full.jpg',
+                    thumb: 'assets/thumb.png'
+                },
+                {
+                    full: 'assets/full.jpg',
+                    thumb: 'assets/thumb.png'
+                }
+            ]
         }
     ];
 })();
