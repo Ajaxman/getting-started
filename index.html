@@ -3,27 +3,45 @@
     <head>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script type="application/javascript" src="src/app.js"></script>
     </head>
     <body ng-controller="StoreController as store">
 
         <p>{{ "hello " + "you" }}</p>
-        <div ng-repeat="product in store.products" class="col-md-8">
+        <div ng-repeat="product in store.products" class="col-md-8 container">
             <h1>{{product.name}}</h1>
             <em class="pull-right">{{product.price | currency}}</em>
-            <p>{{product.description}}</p>
             <img ng-src="{{product.images[0].thumb}}" class="img-responsive" alt="Responsive image">
 
-            <section>
-                <ul class="nav nav-pills">
-                    <li><a href="">Description</a></li>
-                    <li><a href="">Specifications</a></li>
-                    <li><a href="">Reviews</a></li>
+            <section ng-init="tab = 1">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{ active:tab === 1}">
+                        <a href ng-click="tab = 1">Description</a>
+                    </li>
+                    <li ng-class="{ active:tab === 2}">
+                        <a href ng-click="tab = 2">Specifications</a>
+                    </li>
+                    <li ng-class="{ active:tab === 3}">
+                        <a href ng-click="tab = 3">Reviews</a>
+                    </li>
                 </ul>
+                <div class="panel" ng-show="tab === 1">
+                    <h4>Description</h4>
+                    <p>{{product.description}}</p>
+                </div>
+                <div class="panel" ng-show="tab === 2">
+                    <h4>Specifications</h4>
+                    <p>No Yet</p>
+                </div>
+                <div class="panel" ng-show="tab === 3">
+                    <h4>Reviews</h4>
+                    <p>no yet</p>
+                </div>
             </section>
+            <br />
             <button ng-show="product.canPurchase"> Add to Cart </button>
+            <br /><br /><br />
         </div>
-        <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-        <script type="application/javascript" src="src/app.js"></script>
-
     </body>
 </html>

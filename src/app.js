@@ -15,11 +15,11 @@
             images:[
                 {
                     full: 'assets/full.jpg',
-                    thumb: 'assets/thumb.png'
+                    thumb: 'assets/thumb.jpg'
                 },
                 {
                     full: 'assets/full.jpg',
-                    thumb: 'assets/thumb.png'
+                    thumb: 'assets/thumb.jpg'
                 }
             ]
         },
@@ -32,11 +32,11 @@
             images:[
                 {
                     full: 'assets/full.jpg',
-                    thumb: 'assets/thumb.png'
+                    thumb: 'assets/thumb.jpg'
                 },
                 {
                     full: 'assets/full.jpg',
-                    thumb: 'assets/thumb.png'
+                    thumb: 'assets/thumb.jpg'
                 }
             ]
         }
