@@ -10,9 +10,10 @@
     <body ng-controller="StoreController as store">
 
         <p>{{ "hello " + "you" }}</p>
-        <div ng-repeat="product in store.products" class="col-md-8 container">
-            <h1>{{product.name}}</h1>
-            <em class="pull-right">{{product.price | currency}}</em>
+        <div ng-repeat="product in store.products" class="col-md-4 container">
+            <h3 ng-include="'src/product-title.html'">
+            </h3>
+
             <img ng-src="{{product.images[0].thumb}}" class="img-responsive" alt="Responsive image">
 
             <section ng-controller="PanelController as panel">
