@@ -36,7 +36,15 @@
                 </div>
                 <div class="panel" ng-show="panel.isSelected(3) ">
                     <h4>Reviews</h4>
-                    <p>no yet</p>
+                    <ul>
+                        <li ng-repeat="review in product.reviews">
+                            <blockquote>
+                                <strong>{{ review.stars }} Stars</strong>
+                                {{review.body}}
+                                <cite class="clearfix">{{review.author}}</cite>
+                            </blockquote>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <br />

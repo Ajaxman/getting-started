@@ -34,7 +34,18 @@
                     full: 'assets/full.jpg',
                     thumb: 'assets/thumb.jpg'
                 }
-            ]
+            ],
+            reviews: [{
+                stars: 3,
+                body: "I think this gem was just OK, could honestly use more shine, IMO.",
+                author: "JimmyDean@example.org",
+                createdOn: 1397490980837
+            }, {
+                stars: 4,
+                body: "Any gem with 12 faces is for me!",
+                author: "gemsRock@example.org",
+                createdOn: 1397490980837
+            }]
         },
         {
             name: 'Pentagonal Gem',
@@ -51,7 +62,18 @@
                     full: 'assets/full.jpg',
                     thumb: 'assets/thumb.jpg'
                 }
-            ]
+            ],
+            reviews: [{
+                stars: 3,
+                body: "I think this gem was just OK, could honestly use more shine, IMO.",
+                author: "JimmyDean@example.org",
+                createdOn: 1397490980837
+            }, {
+                stars: 4,
+                body: "Any gem with 12 faces is for me!",
+                author: "gemsRock@example.org",
+                createdOn: 1397490980837
+            }]
         }
     ];
 })();
